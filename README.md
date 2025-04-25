@@ -1,14 +1,42 @@
 ### Project Overview 
-TODO
+
+This project demonstrates the implementation of a Retrieval-Augmented Generation (RAG) system using NVIDIA AI endpoints through the LangChain framework. The system is designed for advanced document processing, summarization, and knowledge extraction with generative AI capabilities.
+
+The project leverages an existing NVIDIA RAG project that a team member had previously worked on in parallel this semester, which significantly accelerated development through one-shot prompting techniques. This approach allowed us to rapidly implement complex RAG components while customizing the solution to our specific requirements
 
 ### Running Locally
-TODO
 
-### Getting a NGC API Key
-TODO
+To set up your local environment:
 
+1. **Install virtualenv** for Python environment management:
+   ```bash
+   pip install virtualenv
+   ```
 
+2. **Create and activate virtual environment**:
+   ```bash
+   # Create environment
+   virtualenv .venv
+   
+   # Activate environment
+   source .venv/bin/activate 
+   ```
 
+3. **Install VSCode Jupyter extension**:
+   - Open VSCode Extensions (Ctrl+Shift+X)
+   - Search for "Jupyter" and install
+   - Reload VSCode when prompted
+
+4. **Create a .env file for API key**:
+   ```bash
+   # Create empty .env file in project root
+   touch .env
+   
+   # Add your NVIDIA API key to the file
+   echo "NVIDIA_API_KEY=your_api_key_here" > .env
+   ```
+   - Replace `your_api_key_here` with your actual NVIDIA NGC API key
+   - This file will be loaded by the application to authenticate API requests
 
 ### Prompts
 
@@ -27,7 +55,7 @@ I'm starting a GenAI project in a Jupyter notebook and need to install the neces
 - pymupdf (for PDF document processing)
 - faiss-cpu (for vector storage and similarity search)
 
-I want to create a document retrieval and summarization system that integrates with NVIDIA AI endpoints.
+I want to create a document retrieval and summarizatiosystem that integrates with NVIDIA AI endpoints.
 ```
 
 ### Code Block 2
